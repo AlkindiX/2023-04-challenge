@@ -1,0 +1,6 @@
+### Simple Test
+http://localhost:8080/challenge/towers?operator=Verizon&tower_type=TOWER&technology=5G
+
+
+### Another test
+http://localhost:8080/challenge/towers?operator=Verizon&technology=4G
