@@ -4,3 +4,13 @@ http://localhost:8080/challenge/towers?operator=Verizon&tower_type=TOWER&technol
 
 ### Another test
 http://localhost:8080/challenge/towers?operator=Verizon&technology=4G
+
+
+### Check latitude and longitude of a tower
+http://localhost:8080/challenge/towers?address=1/2 MI NE OF HUGHES STORE ON RD 600 2800' E OF CR 603&latitude=37.469610248472584&longitude=-77.25050725083281
+
+
+
+### Check latitude and longitude of a tower with raidus of 100 km
+http://localhost:8080/challenge/towers?latitude=37.469610248472584&longitude=-77.25050725083281&radius=100
+

@@ -19,6 +19,8 @@ import work.alkindix.byanat.challenge.services.TowerService;
 @RequestMapping("/challenge")
 public class ChallengeResolver {
   
+  private static final String HTTPS_BYANAT_WIREMOCKAPI_CLOUD_API_V1_TOWERS = "https://byanat.wiremockapi.cloud/api/v1/towers";
+
   String jsonCache = null;
 
   @Autowired
@@ -32,6 +34,9 @@ public class ChallengeResolver {
     List<String> errors = new ArrayList<String>();
     
     for (String key : allParams.keySet()) {
+      if (key.equals("radius")) {
+        continue;
+      }
       boolean found = false;
       for (String field : Tower.FIELDS) {
         if (key.equals(field)) {
@@ -59,7 +64,7 @@ public class ChallengeResolver {
     
     // Download https://byanat.wiremockapi.cloud/api/v1/towers into json object
     if (jsonCache == null) {
-      jsonCache = Request.get("https://byanat.wiremockapi.cloud/api/v1/towers")
+      jsonCache = Request.get(HTTPS_BYANAT_WIREMOCKAPI_CLOUD_API_V1_TOWERS)
         .execute()
         .returnContent()
         .asString();

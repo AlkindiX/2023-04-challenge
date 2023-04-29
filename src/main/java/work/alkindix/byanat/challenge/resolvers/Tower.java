@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Tower {
+  // TODO: Use JsonNaming annotation instead of static field names.
   static String[] FIELDS = {
     "tower_id",
     "operator",
