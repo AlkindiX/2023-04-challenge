@@ -107,7 +107,34 @@ GET http://localhost:8080/challenge/towers
 GET http://localhost:8080/health-check
 ```
 
-Please refer to the following (http://localhost:8080/swagger-ui/index.html)[http://localhost:8080/swagger-ui/index.html] for more information
+Please refer to the following [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) for more information
+
+## Bonus
+
+The following endpoints are available for the bonus part of the challenge
+
+```http
+### I would like to search for a tower using geo coordinates and radius. To do that run the following
+GET http://localhost:8080/challenge/towers?latitude=37.469610248472584&longitude=-77.25050725083281&radius=100
+```
+
+### Note
+
+You can use any of the following params to query any data listed in [Tower.java](src\main\java\work\alkindix\byanat\challenge\resolvers\Tower.java)
+
+```Java
+static String[] FIELDS = {
+    "tower_id",
+    "operator",
+    "address",
+    "height",
+    "tower_type",
+    "latitude",
+    "longitude",
+    "technology"
+  };
+
+```
 
 ## Conclusion
 
