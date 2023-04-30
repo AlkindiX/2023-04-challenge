@@ -1,0 +1,22 @@
+services:
+  maven-build:
+    image: maven:3.9.1-eclipse-temurin-17-focal
+    volumes:
+      - .:/usr/src/mymaven
+    command: mvn clean install
+    working_dir: /usr/src/mymaven
+  devel:
+    image: maven:3.9.1-eclipse-temurin-17-focal
+    volumes:
+      - .:/usr/src/mymaven
+    ports:
+      - "8080:8080"
+    command: mvn spring-boot:run
+    working_dir: /usr/src/mymaven
+  prod:
+    image: challenge:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
