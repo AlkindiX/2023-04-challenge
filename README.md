@@ -1,6 +1,14 @@
 # Challenge
 
-This is a project that utilizes Maven as the build tool. This README file provides an overview of how to build, deploy, and develop the project.
+This is a project that utilizes Maven as the build tool. This README file provides an overview of how to build, deploy, and develop the project. 
+Spring boot offer a lot of features out of the box. It has a lot of libraries that can be used to build a production ready application.
+It is all about conventions when using it. It also have enterprise based community that depends on it. It offers MVC with
+dependency injection and inversion of control. It also offers a lot of features like security, caching, and many more.
+
+But building a project from scratch is not an easy task. It requires a lot of knowledge and experience to build a production ready application. And Java is being a Java. Too many plugins and dependencies required to run a basic application. This requires a lot 
+of resources to run. And also the garbage collector is not that good. It requires a lot of memory to run a basic application. But
+this can be solved by not using monolithic application. We can use microservices to solve this problem. Better resource management and
+set of tools and reporting applications to administrate and monitor the application.
 
 ## Build
 
